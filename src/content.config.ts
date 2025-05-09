@@ -15,4 +15,19 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+
+const home = defineCollection({
+	schema: z.object({
+	  title: z.string(),
+	  blocks: z.array(
+		z.object({
+		  title: z.string(),
+		  image: z.string(),
+		  text: z.string(),
+		})
+	  ),
+	}),
+});
+  
+
+  export const collections = { blog, home };
