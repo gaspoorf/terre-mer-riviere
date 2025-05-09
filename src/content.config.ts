@@ -19,7 +19,24 @@ const blog = defineCollection({
 const home = defineCollection({
 	schema: z.object({
 	  title: z.string(),
+
+	  first: z.array(
+		z.object({
+		  title: z.string(),
+		  image: z.string(),
+		  text: z.string(),
+		})
+	  ),
+
 	  blocks: z.array(
+		z.object({
+		  title: z.string(),
+		  image: z.string(),
+		  text: z.string(),
+		})
+	  ),
+
+	  contact: z.array(
 		z.object({
 		  title: z.string(),
 		  image: z.string(),

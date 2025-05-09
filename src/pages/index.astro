@@ -1,15 +1,19 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+// import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.astro';
 import InfoBlock from '../components/InfoBlock.astro';
+import FirstBlock from '../components/FirstBlock.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import { getEntry } from 'astro:content';
 
 const home = await getEntry('home', 'index');
+const first = home?.data.first ?? [];
 const blocks = home?.data.blocks ?? [];
+const contact = home?.data.contact ?? [];
 ---
 
 <!doctype html>
@@ -21,15 +25,30 @@ const blocks = home?.data.blocks ?? [];
     <Header />
 
     <main>
-      {blocks.map((block) => (
-        <InfoBlock
-          title={block.title}
-          image={block.image}
-          text={block.text}
-        />
-      ))}
+		{first.map((first) => (
+			<FirstBlock
+				title={first.title}
+				image={first.image}
+				text={first.text}
+			/>
+		))}
+
+		{blocks.map((block) => (
+			<InfoBlock
+				title={block.title}
+				image={block.image}
+				text={block.text}
+			/>
+		))}
+
+		{contact.map((contact) => (
+			<Contact
+				title={contact.title}
+				image={contact.image}
+				text={contact.text}
+			/>
+		))}
     </main>
-	
-    <Footer />
+
   </body>
 </html>

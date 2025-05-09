@@ -1,19 +1,20 @@
 ---
 const { title, image, text } = Astro.props;
 ---
-<section class="info-block">
+<section class="first-block">
     <h2>{title}</h2>
     <img src={image} alt={title} />
     <p>{text}</p>
 </section>
 
 <style>
-	.info-block {
+	.first-block {
 		height: 100vh;
         width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: red;
 	}
 </style>
