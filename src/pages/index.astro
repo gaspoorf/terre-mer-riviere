@@ -11,6 +11,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import { getEntry } from 'astro:content';
 
+
+
 const home = await getEntry('home', 'index');
 const first = home?.data.first ?? [];
 const blocks = home?.data.blocks ?? [];
@@ -65,7 +67,11 @@ const footer = home?.data.footer ?? [];
 		/>
 	))}
 
-	<!-- <script src="../../public/scripts/script.js" type="module"></script> -->
-	<script src="/scripts/script.js" type="module"></script>
+	 <script type="module">
+      import { setupLenis } from '../scripts/lenis.js';
+      document.addEventListener('DOMContentLoaded', () => {
+        setupLenis();
+      });
+    </script>
   </body>
 </html>
