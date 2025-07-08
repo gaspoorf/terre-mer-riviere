@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import Contact from '../components/Contact.astro';
 import InfoBlock from '../components/InfoBlock.astro';
 import FirstBlock from '../components/FirstBlock.astro';
+import Footer from '../components/Footer.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
@@ -14,6 +15,7 @@ const home = await getEntry('home', 'index');
 const first = home?.data.first ?? [];
 const blocks = home?.data.blocks ?? [];
 const contact = home?.data.contact ?? [];
+const footer = home?.data.footer ?? [];
 ---
 
 <!doctype html>
@@ -21,8 +23,9 @@ const contact = home?.data.contact ?? [];
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
+  
   <body>
-    <Header />
+    <!-- <Header /> -->
 
     <main>
 		{first.map((first) => (
@@ -37,18 +40,31 @@ const contact = home?.data.contact ?? [];
 			<InfoBlock
 				title={block.title}
 				image={block.image}
+				svg={block.svg}
 				text={block.text}
+				color={block.color}
+				lines={block.lines}
 			/>
 		))}
 
-		{contact.map((contact) => (
+		<!-- {contact.map((contact) => (
 			<Contact
 				title={contact.title}
 				image={contact.image}
 				text={contact.text}
 			/>
-		))}
+		))} -->
     </main>
 
+	{footer.map((footer) => (
+		<Footer
+			title={footer.title}
+			text={footer.text}
+			caption={footer.caption}
+			mail={footer.mail}
+		/>
+	))}
+
+	<script src="../../public/scripts/script.js" type="module"></script>
   </body>
 </html>

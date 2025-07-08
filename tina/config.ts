@@ -28,7 +28,7 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "content/blog", // Chemin vers ton dossier "content/blog"
+        path: "src/content/blog", // Chemin vers ton dossier "content/blog"
         fields: [
           {
             type: "string",
@@ -65,7 +65,7 @@ export default defineConfig({
       {
         name: "home",
         label: "Home Page",
-        path: "content/home", // Chemin vers ton dossier "content/home"
+        path: "src/content/home", // Chemin vers ton dossier "content/home"
         fields: [
           {
             type: "string",
@@ -78,11 +78,12 @@ export default defineConfig({
             type: "object",  // Utilisation de "object" pour des sous-sections répétables
             name: "first",
             label: "First Section",
+            list: true,
             fields: [
               {
                 type: "string",
                 name: "title",
-                label: "Section Title",
+                label: "Titre",
               },
               {
                 type: "image",
@@ -109,6 +110,11 @@ export default defineConfig({
               },
               {
                 type: "image",
+                name: "svg",
+                label: "Icon correspondant",
+              },
+              {
+                type: "image",
                 name: "image",
                 label: "Block Image",
               },
@@ -116,6 +122,16 @@ export default defineConfig({
                 type: "string",
                 name: "text",
                 label: "Block Text",
+              },
+              {
+                type: "string",
+                name: "color",
+                label: "Couleur de fond",
+              },
+              {
+                type: "number",
+                name: "lines",
+                label: "Lignes de décoration (1, 2 ou 3)",
               },
             ],
           },
@@ -139,6 +155,34 @@ export default defineConfig({
                 type: "string",
                 name: "text",
                 label: "Contact Text",
+              },
+            ],
+          },
+           {
+            type: "object",  // Utilisation de "object" pour des sous-sections répétables
+            name: "footer",
+            label: "Footer Section",
+            list: true,  // Ajoute l'option "list: true" pour permettre d'avoir plusieurs objets
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Titre",
+              },
+              {
+                type: "string",
+                name: "text",
+                label: "Texte",
+              },
+              {
+                type: "string",
+                name: "caption",
+                label: "Description",
+              },
+              {
+                type: "string",
+                name: "mail",
+                label: "Email",
               },
             ],
           },

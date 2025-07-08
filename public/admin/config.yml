@@ -20,4 +20,7 @@ collections:
             fields:
               - { label: "Titre", name: "title", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
+              - { label: "Svg", name: "svg", widget: "image" }
               - { label: "Texte", name: "text", widget: "text" }
+              - { label: "Couleur", name: "color", widget: "text" }
+              - { label: "Lignes", name: "lines", widget: "number" }

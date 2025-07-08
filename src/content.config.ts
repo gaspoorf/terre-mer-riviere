@@ -32,7 +32,11 @@ const home = defineCollection({
 		z.object({
 		  title: z.string(),
 		  image: z.string(),
+		  svg: z.string(),
 		  text: z.string(),
+		  color: z.string(),
+		  lines: z.number(),
+
 		})
 	  ),
 
@@ -41,6 +45,15 @@ const home = defineCollection({
 		  title: z.string(),
 		  image: z.string(),
 		  text: z.string(),
+		})
+	  ),
+
+	  footer: z.array(
+		z.object({
+			title: z.string(),
+			mail: z.string(),
+			caption: z.string(),
+			text: z.string(),
 		})
 	  ),
 	}),
