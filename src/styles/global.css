@@ -67,11 +67,11 @@ body {
 	background: linear-gradient(var(--gray-gradient)) no-repeat;
 	background-size: 100% 600px;
 	word-wrap: break-word;
-	overflow-wrap: break-word;
+	/* overflow-wrap: break-word; */
 	color: rgb(var(--gray-dark));
 	font-size: 1rem;
 	line-height: 1.7;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 /* main {
 	width: 720px;
