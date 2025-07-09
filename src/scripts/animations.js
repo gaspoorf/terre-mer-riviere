@@ -1,9 +1,10 @@
 // animations.js
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 // Enregistrer le plugin
 gsap.registerPlugin(ScrollTrigger);
+
 
 export function animateTitleContent() {
     gsap.fromTo('.title-content', 
