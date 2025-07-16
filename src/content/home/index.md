@@ -8,9 +8,7 @@ blocks:
   - title: Ria
     svg: /Group 407.svg
     image: /riviere.jpeg
-    text: >-
-      Sauvegarder les milieux aquatiques des cours d’eaux Sauvegarder les
-      milieux eaquat edfsfsiqu s des cours d’eaux 
+    text: cacacacacc
     color: '#74A6AC'
     lines: 1
   - title: Mer
