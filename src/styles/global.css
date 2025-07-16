@@ -91,6 +91,9 @@ p {
 	margin: 0;
 }
 
+.char{
+	opacity: 0;
+}
 
 
 .sr-only {

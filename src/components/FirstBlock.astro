@@ -5,20 +5,20 @@ const { title, image, text } = Astro.props;
 <section class="sky">
     <div class="sky-content">
         <div class="title-content">
-            <h1 set:html={title}></h1>
+            <h1 class="title-split" set:html={title}></h1>
         </div>
     </div>
 
     <img src="/cloud-1.png" class="cloud-1" alt="Image de nuage">
 
-     <img src="/cloud-2.png" class="cloud-2" alt="Image de nuage">
+    <img src="/cloud-2.png" class="cloud-2" alt="Image de nuage">
 
 
     <div class="first-block">
         <img src={image} alt={title}/>
        
         <div class="first-content">
-            <p>{text}</p>
+            <p class="text-split">{text}</p>
         </div>
     </div>
 </section>
@@ -32,6 +32,10 @@ const { title, image, text } = Astro.props;
 </script>
 
 <style>
+
+    .title-split{
+        opacity: 0;
+    }
 
     .sky {
         /* background-color: #c2e6f4; */
@@ -52,6 +56,12 @@ const { title, image, text } = Astro.props;
         width: 100vw;
 	}
 
+    .cloud-1,
+    .cloud-2 {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+
     .cloud-1{
         opacity: 0.8;
         width: 100%;
@@ -66,7 +76,7 @@ const { title, image, text } = Astro.props;
         width: 100%;
         height: auto;
         position: absolute;
-        top: 35rem;
+        top: 25rem;
         left: 0;
     }
 
@@ -88,14 +98,18 @@ const { title, image, text } = Astro.props;
     }
 
     .first-content{
-        top: 68%;
         line-height: 38px;
+        width: 500px;
+        top: auto;
+        bottom: 4.5rem;
     }
     
     .title-content{
         white-space: nowrap;
         position: fixed;
     }
+
+
 
     img{
         position: absolute;
@@ -131,6 +145,13 @@ const { title, image, text } = Astro.props;
             top: 50%;
             font-size: 1.5rem;
             white-space: wrap;
+            min-width: 330px;
+        }
+
+        .first-content {
+            width: 400px;
+            top: auto;
+            bottom: 0;
         }
 
         h1{
@@ -139,12 +160,13 @@ const { title, image, text } = Astro.props;
         }
 
         :global(.title-content span) {
-            display: none;
+            display: none !important;
         }
 
         .first-block{
             overflow: hidden;
             height: 70vh;
+            min-height: 45rem;
         }
 
         .first-block img{
@@ -152,5 +174,12 @@ const { title, image, text } = Astro.props;
             max-height: 610px;;
         }
         
+    }
+
+
+    @media screen and (max-width: 430px) {
+        .first-content {
+            width: 300px;
+        }
     }
 </style>

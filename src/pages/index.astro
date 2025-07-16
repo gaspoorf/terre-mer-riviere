@@ -12,8 +12,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getEntry } from 'astro:content';
 
 
-// import { setupLenis } from '../scripts/script.js';
-
 
 const home = await getEntry('home', 'index');
 const first = home?.data.first ?? [];
