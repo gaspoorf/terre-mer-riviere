@@ -18,8 +18,7 @@ blocks:
     image: /vagues.png
     text: >-
       Agir pour la protection de l’environnement marin et du littoral, à travers
-      des actions de sensibilisation, de préservation et de valorisation des
-      écosystèmes côtiers.
+      des actions de sensibilisation et de préservation des écosystèmes côtiers.
     color: '#0B2828'
     lines: 2
   - title: Terre
