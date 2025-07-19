@@ -8,7 +8,9 @@ blocks:
   - title: Ria
     svg: /Group 407.svg
     image: /riviere.jpeg
-    text: cacacacacc
+    text: >-
+      Sauvegarder les milieux aquatiques et les écosystèmes des cours d’eau, en
+      favorisant une gestion durable et respectueuse de la biodiversité.
     color: '#74A6AC'
     lines: 1
   - title: Mer
