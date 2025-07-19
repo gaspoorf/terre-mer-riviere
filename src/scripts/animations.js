@@ -1,6 +1,10 @@
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import Lenis from 'lenis';
+
+const lenis = window.lenis
+
 import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -111,15 +115,17 @@ export function animateTitleContent() {
                 trigger: '.cloud-1',
                 start: 'top bottom',
                 end: 'bottom top',
-                scrub: true,
-                invalidateOnRefresh: true,
+                scrub: 1,
             }
         }
     );
 
 
 
-    
+    lenis.stop();
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
     const cloud2 = document.querySelector('.cloud-2');
     gsap.fromTo(cloud2,
         {
@@ -128,20 +134,23 @@ export function animateTitleContent() {
         },
         {
             y: 0,
-            opacity: 1,
+            opacity: 0.5,
             ease: "power2.out",
             duration: 2,
             onComplete: () => {
-                gsap.to(cloud2, {
-                    y: 200,
+                lenis.start();
+                document.body.style.overflow = ""; // Réactive le scroll
+                gsap.fromTo(cloud2, {
+                        y: -16,
+                    },
+                    {y: 200,
                     ease: "power1.inOut",
                     immediateRender: false,
                     scrollTrigger: {
                         trigger: cloud2,
                         start: 'top bottom',
                         end: 'bottom top',
-                        scrub: true,
-                        invalidateOnRefresh: true,
+                        scrub: 1,
                     }
                 });
             }
@@ -151,26 +160,49 @@ export function animateTitleContent() {
 
     document.querySelectorAll('.lines').forEach((line) => {
         gsap.fromTo(line,
-        {
-            scale: 1.5,
-            y: -150,
-        },
-        {
-            scale: 2,
-            y: 150,
-        
-            ease: "power1.inOut",
-            scrub: true,
-            scrollTrigger: {
-                trigger: '.lines-1',
-                start: 'top-=100% center',
-                end: 'bottom+=100% center',
-                scrub: true,
+            {
+                scale: 1.5,
+                y: -50,
+            },
+            {
+                scale: 2,
+                y: 50,
+                ease: "power2.inOut",
+                scrollTrigger: {
+                    trigger: line,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 1,
+                  
+                }
             }
-        }
         );
-    }
-    );
+    });
+
+
+    //svg animations
+    const paths = document.querySelectorAll(".icon path");
+    paths.forEach((path) => {
+        const length = path.getTotalLength();
+
+        gsap.set(path, {
+            strokeDasharray: length,
+            strokeDashoffset: length,
+        });
+
+        gsap.to(path, {
+            strokeDashoffset: 0,
+            duration: 1.5,
+            ease: "power1.out",
+            scrollTrigger: {
+            trigger: path,
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none reverse",
+            }
+        });
+    });
+
     
 }
 

@@ -27,6 +27,11 @@ const footer = home?.data.footer ?? [];
   </head>
   
   <body>
+	<script>
+		window.scrollTo(0, 0);
+		import "../scripts/lenis-init.js";
+	</script>
+
     <!-- <Header /> -->
 
     <main>
@@ -66,13 +71,6 @@ const footer = home?.data.footer ?? [];
 			mail={footer.mail}
 		/>
 	))}
-
-	
-
-	<script>
-		import "../scripts/lenis-init.js";
-	</script>
-
 
   </body>
 </html>
