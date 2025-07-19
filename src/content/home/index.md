@@ -2,7 +2,7 @@
 title: Page d'accueil
 first:
   - title: Terre <span> ⸱ </span> Mer <span> ⸱ </span> Rivière
-    image: /ile-crop.png
+    image: /ile-crop.webp
     text: ' L’association des amis du pays de l’Aven et du Bélon, attentive à son environnement.'
 blocks:
   - title: Ria
