@@ -14,7 +14,7 @@ const year = new Date().getFullYear();
     <div class="footer-container">
         <div class="footer-col">
             <p class="title">{title}</p>
-            <p>{text}</p>
+            <p class="text">{text}</p>
             <p>{caption}</p>
         </div>
 
@@ -98,6 +98,7 @@ const year = new Date().getFullYear();
 
         .footer-container{
             flex-direction: column;
+            text-align: center;
         }
 
         .footer-col{
@@ -106,6 +107,10 @@ const year = new Date().getFullYear();
 
         .footer-block .title{
             font-size: 1.5rem;
+        }
+
+        .footer-block .text{
+            font-size: 1.2rem;
         }
     }
 	    

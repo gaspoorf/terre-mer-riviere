@@ -32,7 +32,9 @@ const footer = home?.data.footer ?? [];
 		import "../scripts/lenis-init.js";
 	</script>
 
-    <!-- <Header /> -->
+	{footer.map((footer) => (
+		<Header mail={footer.mail} />
+	))}
 
     <main>
 		{first.map((first) => (

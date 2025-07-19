@@ -116,7 +116,7 @@ export function animateTitleContent() {
     const cloud2 = document.querySelector('.cloud-2');
     gsap.fromTo(cloud2,
         {
-            y: 100,
+            y: 200,
             opacity: 0,
         },
         {
@@ -127,7 +127,7 @@ export function animateTitleContent() {
             onComplete: () => {
                 lenis.start();
                 gsap.fromTo(cloud2, {
-                        y: -16,
+                        y: -22,
                     },
                     {y: 200,
                     ease: "power1.inOut",

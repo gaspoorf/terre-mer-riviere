@@ -1,5 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+const { mail } = Astro.props;
 // import { SITE_TITLE } from '../consts';
 ---
 
@@ -7,9 +8,11 @@ import HeaderLink from './HeaderLink.astro';
 	<nav>
 		<!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
 		<div class="internal-links">
-			<HeaderLink href="/">Accueil</HeaderLink>
-			<HeaderLink href="/blog">Actualités</HeaderLink>
-			<HeaderLink href="/about">Contact</HeaderLink>
+			<!-- <HeaderLink href="/">Accueil</HeaderLink>
+			<HeaderLink href="/blog">Actualités</HeaderLink> -->
+			<!-- <HeaderLink href="/about">Contact</HeaderLink> -->
+			<!-- <HeaderLink href={`mailto:${mail}`}>Contact</HeaderLink> -->
+			<a href={`mailto:${mail}`}>Contact</a>
 		</div>
 	</nav>
 </header>
@@ -20,6 +23,8 @@ import HeaderLink from './HeaderLink.astro';
 		background-color: transparent;
 		position: absolute;
 		z-index: 1;
+		right: 0;
+		top: 1rem;
 	}
 	h2 {
 		margin: 0;
@@ -36,10 +41,15 @@ import HeaderLink from './HeaderLink.astro';
 		justify-content: space-between;
 	}
 	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
+		padding: 0;
+		margin: 1rem;
+		color: #F4F6E1;
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+		transition: color 0.2s ease-in-out;
+	}
+	nav a:hover{
+		color: #0B2828;
 	}
 	nav a.active {
 		text-decoration: none;
