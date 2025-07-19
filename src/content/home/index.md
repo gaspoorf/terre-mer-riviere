@@ -24,7 +24,9 @@ blocks:
   - title: Terre
     svg: /Group 406.svg
     image: /terre.png
-    text: ' Valorisation des sites naturels, urbains et historiques. Préservation et aménagements raisonnés du territoire.'
+    text: >-
+      Valoriser les sites naturels, urbains et historiques tout en assurant la
+      préservation et des aménagements raisonnés du territoire.
     color: '#7A8450'
     lines: 3
 contact:
