@@ -10,17 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export function animateTitleContent() {
-    // gsap.fromTo('.title-content', 
-    // {
-    //     opacity: 0,
-    // },
-    // {
-    //     opacity: 1,
-    //     duration: 1.2,
-    //     delay: 1,
-    //     ease: "power1.inOut",
-    //     }
-    // );
 
     const titleWords = document.querySelectorAll(".title-split");
 
@@ -123,8 +112,6 @@ export function animateTitleContent() {
 
 
     lenis.stop();
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
 
     const cloud2 = document.querySelector('.cloud-2');
     gsap.fromTo(cloud2,
@@ -139,7 +126,6 @@ export function animateTitleContent() {
             duration: 2,
             onComplete: () => {
                 lenis.start();
-                document.body.style.overflow = ""; // Réactive le scroll
                 gsap.fromTo(cloud2, {
                         y: -16,
                     },
