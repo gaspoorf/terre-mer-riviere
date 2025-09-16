@@ -7,6 +7,10 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
+import { getEntry } from 'astro:content';
+
+const home = await getEntry('home', 'index');
+const footer = home?.data.footer ?? [];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
@@ -17,7 +21,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			main {
 				width: calc(100% - 2em);
 				max-width: 100%;
-				margin: 0;
+				margin: 0 auto;
 			}
 			.hero-image {
 				width: 100%;
@@ -26,14 +30,14 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				display: block;
 				margin: 0 auto;
 				border-radius: 12px;
-				box-shadow: var(--box-shadow);
 			}
 			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
+				width: 900px;
+				max-width: 100%;
 				margin: auto;
-				padding: 1em;
 				color: rgb(var(--gray-dark));
+				margin-top: 10rem;
+				margin-bottom: 10rem;
 			}
 			.title {
 				margin-bottom: 1em;
@@ -44,6 +48,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.title h1 {
 				margin: 0 0 0.5em 0;
 			}
+			@media (max-width: 720px){
+				.title h1 {
+					font-size: 3rem;
+				}
+			}
 			.date {
 				margin-bottom: 0.5em;
 				color: rgb(var(--gray));
@@ -51,18 +60,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			
 		</style>
 	</head>
 
 	<body>
+		<script>
+			import "../scripts/lenis-init.js";
+		</script>
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-				</div>
 				<div class="prose">
 					<div class="title">
+						
+						<h1>{title}</h1>
+
 						<div class="date">
 							<FormattedDate date={pubDate} />
 							{
@@ -73,13 +86,26 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 								)
 							}
 						</div>
-						<h1>{title}</h1>
-						<hr />
+
 					</div>
+
+					<div class="hero-image">
+						{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+					</div>
+					
 					<slot />
+					
 				</div>
 			</article>
 		</main>
-		<Footer />
+		
+		{footer.map((footer) => (
+			<Footer
+				title={footer.title}
+				text={footer.text}
+				caption={footer.caption}
+				mail={footer.mail}
+			/>
+		))}
 	</body>
 </html>

@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 // import Footer from '../components/Footer.astro';
 import Contact from '../components/Contact.astro';
 import InfoBlock from '../components/InfoBlock.astro';
+import BlogBlock from '../components/BlogBlock.astro';
 import FirstBlock from '../components/FirstBlock.astro';
 import Footer from '../components/Footer.astro';
 
@@ -22,57 +23,60 @@ const footer = home?.data.footer ?? [];
 
 <!doctype html>
 <html lang="fr">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
   
-  <body>
-	<script>
-		window.scrollTo(0, 0);
-		import "../scripts/lenis-init.js";
-	</script>
+  	<body>
+		<script>
+			window.scrollTo(0, 0);
+			import "../scripts/lenis-init.js";
+		</script>
 
-	{footer.map((footer) => (
-		<Header mail={footer.mail} />
-	))}
+		{footer.map((footer) => (
+			<Header mail={footer.mail} />
+		))}
 
-    <main>
-		{first.map((first) => (
-			<FirstBlock
-				title={first.title}
-				image={first.image}
-				text={first.text}
+		<main>
+			{first.map((first) => (
+				<FirstBlock
+					title={first.title}
+					image={first.image}
+					text={first.text}
+				/>
+			))}
+
+			{blocks.map((block) => (
+				<InfoBlock
+					title={block.title}
+					image={block.image}
+					svg={block.svg}
+					text={block.text}
+					color={block.color}
+					lines={block.lines}
+				/>
+			))}
+
+			<BlogBlock />
+			
+			
+			<!-- {contact.map((contact) => (
+				<Contact
+					title={contact.title}
+					image={contact.image}
+					text={contact.text}
+				/>
+			))} -->
+		</main>
+
+		{footer.map((footer) => (
+			<Footer
+				title={footer.title}
+				text={footer.text}
+				caption={footer.caption}
+				mail={footer.mail}
 			/>
 		))}
 
-		{blocks.map((block) => (
-			<InfoBlock
-				title={block.title}
-				image={block.image}
-				svg={block.svg}
-				text={block.text}
-				color={block.color}
-				lines={block.lines}
-			/>
-		))}
-
-		<!-- {contact.map((contact) => (
-			<Contact
-				title={contact.title}
-				image={contact.image}
-				text={contact.text}
-			/>
-		))} -->
-    </main>
-
-	{footer.map((footer) => (
-		<Footer
-			title={footer.title}
-			text={footer.text}
-			caption={footer.caption}
-			mail={footer.mail}
-		/>
-	))}
-
-  </body>
+	</body>
 </html>

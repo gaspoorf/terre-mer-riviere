@@ -6,9 +6,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
+import { getEntry } from 'astro:content';
+
+const home = await getEntry('home', 'index');
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const footer = home?.data.footer ?? [];
 ---
 
 <!doctype html>
@@ -16,39 +20,55 @@ const posts = (await getCollection('blog')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
+
 			main {
-				width: 960px;
+				width: calc(100% - 2em);
+				max-width: 100%;
+				margin: 0 auto;
+				margin-bottom: 10rem;
 			}
+
+			.heading {
+				text-align: center;
+				margin: 6rem 0 4rem 0;
+			}
+
+			.heading h1 {
+				font-size: 5.5rem;
+				line-height: 75px;
+			}
+
+			@media (max-width: 720px){
+				.heading {
+					margin: 6rem 0 2rem 0;
+				}
+
+
+				.heading h1 {
+					font-size: 3rem;
+				}
+
+				.heading p{
+					font-size: 1.3rem;
+					line-height: 25px;
+				}
+			}
+
 			ul {
-				display: flex;
-				flex-wrap: wrap;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
 				gap: 2rem;
 				list-style-type: none;
-				margin: 0;
 				padding: 0;
+				width: fit-content;
+				margin: 0 auto;
 			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
+
 			ul li * {
 				text-decoration: none;
-				transition: 0.2s ease;
 			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
+
+
 			ul li a {
 				display: block;
 			}
@@ -61,44 +81,60 @@ const posts = (await getCollection('blog')).sort(
 				margin: 0;
 				color: rgb(var(--gray));
 			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
+
+			li{ 
+				height: 100%;
+				width: auto;
+				list-style: none;
+				overflow: hidden;
+				position: relative;
+				width: 20rem;
 			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
+
+
+			li a img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				object-fit: cover;
 			}
+
+			@media (max-width: 1060px) {
+				ul{
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+
 			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
+				ul{
+					grid-template-columns: 1fr;
 				}
 			}
 		</style>
 	</head>
 	<body>
+		<script>
+			import "../../scripts/lenis-init.js";
+		</script>
 		<Header />
 		<main>
 			<section>
+				<div class="heading">
+					<h1>Actualités</h1>
+					<p>Retrouvez ici toutes les actualités de Terre Mer Rivière !</p>
+				</div>
 				<ul>
 					{
 						posts.map((post) => (
 							<li>
-								<a href={`/blog/${post.id}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
+								<a href={`/blog/${post.id}/`} class="post-tile">
+									<div class="tile-head">
+										<img src={post.data.heroImage} alt="" />
+									</div>
+									<div class="tile-body">
+										<h4 class="title">{post.data.title}</h4>
+										<p class="description">{post.data.description}</p>
+									</div>
 								</a>
 							</li>
 						))
@@ -106,6 +142,13 @@ const posts = (await getCollection('blog')).sort(
 				</ul>
 			</section>
 		</main>
-		<Footer />
+		{footer.map((footer) => (
+			<Footer
+				title={footer.title}
+				text={footer.text}
+				caption={footer.caption}
+				mail={footer.mail}
+			/>
+		))}
 	</body>
 </html>

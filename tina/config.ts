@@ -33,7 +33,7 @@ export default defineConfig({
           {
             type: "string",
             name: "title",
-            label: "Title",
+            label: "Titre",
             isTitle: true,
             required: true,
           },
@@ -45,18 +45,25 @@ export default defineConfig({
           {
             type: "datetime",
             name: "pubDate",
-            label: "Publication Date",
+            label: "Date de publication ",
           },
           {
             type: "datetime",
             name: "updatedDate",
-            label: "Updated Date",
+            label: "Date de mise à jour",
             required: false,
           },
           {
             type: "image",
             name: "heroImage",
-            label: "Hero Image",
+            label: "Image principale",
+            required: false,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Contenu de l'article",
+            isBody: true,
             required: false,
           },
         ],
