@@ -92,6 +92,51 @@ export function animateTitleContent() {
 
 
 
+    const postCards = document.querySelectorAll(".post-card");
+
+    var textDelay = 0; 
+    postCards.forEach((card) => {
+        gsap.set(card, {
+            opacity: 0,
+            filter: "blur(10px)",
+            y: 100,
+        });
+
+        gsap.to(card, {
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: textDelay,
+            y: 0,
+
+            scrollTrigger: {
+                trigger: card,
+                start: 'top center+=20%',
+                end: 'bottom center',
+                ease: "power1.inOut",
+                toggleActions: "play none none reverse",
+            }
+        });
+        textDelay = textDelay + 0.1;
+    });
+
+
+    
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        gsap.fromTo('.main-img', 
+            { scale: 1 },
+            {
+                scale: 1.2,
+                ease: "power1.inOut",
+                scrollTrigger: {
+                    trigger: '.main-img',
+                    start: 'center bottom',
+                    end: 'bottom top',
+                    scrub: 1,
+                }
+            }
+        );
+    }
 
 
 

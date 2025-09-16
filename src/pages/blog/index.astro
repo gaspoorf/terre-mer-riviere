@@ -30,12 +30,13 @@ const footer = home?.data.footer ?? [];
 
 			.heading {
 				text-align: center;
-				margin: 6rem 0 4rem 0;
+				margin: 10rem 0 4rem 0;
 			}
 
 			.heading h1 {
 				font-size: 5.5rem;
 				line-height: 75px;
+				opacity: 0;
 			}
 
 			@media (max-width: 720px){
@@ -115,12 +116,17 @@ const footer = home?.data.footer ?? [];
 	<body>
 		<script>
 			import "../../scripts/lenis-init.js";
+			import { initPageAnimations } from '../../scripts/animations.js';
+ 
+			document.addEventListener('DOMContentLoaded', () => {
+				initPageAnimations();
+			});
 		</script>
 		<Header />
 		<main>
 			<section>
 				<div class="heading">
-					<h1>Actualités</h1>
+					<h1 class="title-split">Actualités</h1>
 					<p>Retrouvez ici toutes les actualités de Terre Mer Rivière !</p>
 				</div>
 				<ul>

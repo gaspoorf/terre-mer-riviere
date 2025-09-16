@@ -28,7 +28,7 @@ const posts = (await getCollection('blog')).sort(
             <ul>
                 {
                     posts.slice(0, 3).map((post) => (
-                        <li>
+                        <li class="post-card">
                             <a href={`/blog/${post.id}/`} class="post-tile">
                                 <div class="tile-head">
                                     <img src={post.data.heroImage} alt="" />
@@ -46,6 +46,14 @@ const posts = (await getCollection('blog')).sort(
     
     </section>
 </div>
+
+<script>
+  import { initPageAnimations } from '../scripts/animations.js';
+ 
+  document.addEventListener('DOMContentLoaded', () => {
+    initPageAnimations();
+  });
+</script>
 
 <style>
 
@@ -117,6 +125,7 @@ const posts = (await getCollection('blog')).sort(
         gap: 2rem;
         justify-content: center;
         padding: 0;
+        
     }
 
     li{ 
