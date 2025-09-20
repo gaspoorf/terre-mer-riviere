@@ -39,6 +39,6 @@ footer:
     caption: >-
       Au cœur du  PAYS DES RIAS DE L'AVEN ET DU BÉLON Nevez, Pont Aven, Riec sur
       Bélon, Trégunc
-    mail: ' tmr.terremerrivieres@gmail.com'
+    mail: tmr.terremerrivieres@gmail.com
 ---
 
