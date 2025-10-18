@@ -20,11 +20,12 @@ export function animateTitleContent() {
         types: "words, chars",
     });
 
-    var charDelay = 1; 
+    var charDelay = 0; 
     splitedIntro.chars.forEach((char) => {
         gsap.to(char, {
             opacity: 1,
             filter: "blur(0px)",
+            duration: 1.5,
             delay: charDelay,
         });
         charDelay = charDelay + 0.05;
