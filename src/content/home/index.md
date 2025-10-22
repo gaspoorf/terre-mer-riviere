@@ -37,8 +37,8 @@ footer:
   - title: Terre ⸱ Mer ⸱ Rivière
     text: Proposer ⸱ Informer ⸱ Participer ⸱ Alerter
     caption: >-
-      Au cœur du  PAYS DES RIAS DE L'AVEN ET DU BÉLON Nevez, Pont Aven, Riec sur
-      Bélon, Trégunc
+      Au cœur du PAYS DES RIAS DE L'AVEN ET DU BÉLON‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ Nevez, Pont
+      Aven, Riec sur Bélon
     mail: tmr.terremerrivieres@gmail.com
 ---
 
