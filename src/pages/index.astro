@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 // import Footer from '../components/Footer.astro';
 import Contact from '../components/Contact.astro';
 import InfoBlock from '../components/InfoBlock.astro';
+import ValuesBlock from '../components/ValuesBlock.astro';
 import BlogBlock from '../components/BlogBlock.astro';
 import FirstBlock from '../components/FirstBlock.astro';
 import Footer from '../components/Footer.astro';
@@ -17,7 +18,7 @@ import { getEntry } from 'astro:content';
 const home = await getEntry('home', 'index');
 const first = home?.data.first ?? [];
 const blocks = home?.data.blocks ?? [];
-const contact = home?.data.contact ?? [];
+const values = home?.data.values ?? [];
 const footer = home?.data.footer ?? [];
 ---
 
@@ -29,7 +30,7 @@ const footer = home?.data.footer ?? [];
   
   	<body>
 		<script>
-			window.scrollTo(0, 0);
+			// window.scrollTo(0, 0);
 			import "../scripts/lenis-init.js";
 		</script>
 
@@ -56,6 +57,24 @@ const footer = home?.data.footer ?? [];
 					lines={block.lines}
 				/>
 			))}
+
+			{values.map((value) => (
+				<ValuesBlock
+					title={value.title}
+					text1={value.text1}
+					svg1={value.svg1}
+					text2={value.text2}
+					svg2={value.svg2}
+					text3={value.text3}
+					svg3={value.svg3}
+					text4={value.text4}
+					svg4={value.svg4}
+					color={value.color}
+					lines={value.lines}
+				/>
+			))}
+
+					
 
 			<BlogBlock />
 			

@@ -18,44 +18,59 @@ const blog = defineCollection({
 
 const home = defineCollection({
 	schema: z.object({
-	  title: z.string(),
+		title: z.string(),
 
-	  first: z.array(
-		z.object({
-		  title: z.string(),
-		  image: z.string(),
-		  text: z.string(),
-		})
-	  ),
+		first: z.array(
+			z.object({
+				title: z.string(),
+				image: z.string(),
+				text: z.string(),
+			})
+		),
 
-	  blocks: z.array(
-		z.object({
-		  title: z.string(),
-		  image: z.string(),
-		  svg: z.string(),
-		  text: z.string(),
-		  color: z.string(),
-		  lines: z.number(),
+		blocks: z.array(
+			z.object({
+				title: z.string(),
+				image: z.string(),
+				svg: z.string(),
+				text: z.string(),
+				color: z.string(),
+				lines: z.number(),
+			})
+		),
 
-		})
-	  ),
+		values: z.array(
+			z.object({
+				title: z.string(),
+				text1: z.string(),
+				svg1: z.string(),
+				text2: z.string(),
+				svg2: z.string(),
+				text3: z.string(),
+				svg3: z.string(),
+				text4: z.string(),
+				svg4: z.string(),
+				color: z.string(),
+				lines: z.number(),
+			})
+		),
 
-	  contact: z.array(
-		z.object({
-		  title: z.string(),
-		  image: z.string(),
-		  text: z.string(),
-		})
-	  ),
+		contact: z.array(
+			z.object({
+				title: z.string(),
+				image: z.string(),
+				text: z.string(),
+			})
+		),
 
-	  footer: z.array(
-		z.object({
-			title: z.string(),
-			mail: z.string(),
-			caption: z.string(),
-			text: z.string(),
-		})
-	  ),
+		footer: z.array(
+			z.object({
+				title: z.string(),
+				mail: z.string(),
+				caption: z.string(),
+				text: z.string(),
+			})
+		),	
 	}),
 });
   

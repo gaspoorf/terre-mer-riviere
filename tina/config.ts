@@ -143,6 +143,69 @@ export default defineConfig({
             ],
           },
           {
+            type: "object",
+            name: "values",
+            label: "Values Section",
+            list: true,
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Block Title",
+              },
+              {
+                type: "string",
+                name: "text1",
+                label: "Block Text 1",
+              },
+              {
+                type: "image",
+                name: "svg1",
+                label: "Icon 1",
+              },
+              {
+                type: "string",
+                name: "text2",
+                label: "Block Text 2",
+              },
+              {
+                type: "image",
+                name: "svg2",
+                label: "Icon 2",
+              },
+              {
+                type: "string",
+                name: "text3",
+                label: "Block Text 3",
+              },
+              {
+                type: "image",
+                name: "svg3",
+                label: "Icon 3",
+              },
+              {
+                type: "string",
+                name: "text4",
+                label: "Block Text 4",
+              },
+              {
+                type: "image",
+                name: "svg4",
+                label: "Icon 4",
+              },
+              {
+                type: "string",
+                name: "color",
+                label: "Couleur de fond",
+              },
+              {
+                type: "number",
+                name: "lines",
+                label: "Lignes de décoration (1, 2 ou 3)",
+              },
+            ],
+          },
+          {
             type: "object",  // Utilisation de "object" pour des sous-sections répétables
             name: "contact",
             label: "Contact Section",
