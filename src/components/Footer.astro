@@ -15,7 +15,7 @@ const year = new Date().getFullYear();
         <div class="footer-col">
             <p class="title">{title}</p>
             <p class="text">{text}</p>
-            <p>{caption}</p>
+            <p class="caption">{caption}</p>
         </div>
 
         <div class="footer-col">
@@ -87,6 +87,10 @@ const year = new Date().getFullYear();
         gap: 1rem;
         align-items:: left;
         width: 40%;
+    }
+
+    .footer-block .caption{
+        max-width: 400px;
     }
 
     @media screen and (max-width: 768px) {

@@ -92,6 +92,31 @@ export function animateTitleContent() {
     });
 
 
+    const values = document.querySelectorAll(".value");
+    let valueDelay = 0;
+    values.forEach((word) => {
+        gsap.set(word, {
+            opacity: 0,
+            filter: "blur(10px)",
+            y: 100,
+        });
+        gsap.to(word, {
+            opacity: 1,
+            filter: "blur(0px)",
+            y: 0,
+            ease: "power1.inOut",
+            duration: 0.5,
+            delay: valueDelay,
+            scrollTrigger: {
+                trigger: values,
+                start: 'top center+=20%',
+                end: 'bottom center',
+            }
+        });
+        valueDelay = valueDelay + 0.15;
+    });
+
+
 
     const postCards = document.querySelectorAll(".post-card");
 
@@ -114,7 +139,6 @@ export function animateTitleContent() {
                 start: 'top center+=20%',
                 end: 'bottom center',
                 ease: "power1.inOut",
-                toggleActions: "play none none reverse",
             }
         });
         textDelay = textDelay + 0.1;

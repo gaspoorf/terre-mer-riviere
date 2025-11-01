@@ -29,28 +29,28 @@ const clipId = `clip-path-${lines}`;
                     <div class="svg-container">
                         <img src={svg1} alt={title}/>
                     </div>
-                    <p class="content-split">{text1}</p>
+                    <p>{text1}</p>
                 </div>
                
                 <div class="value">
                     <div class="svg-container">
                         <img src={svg2} alt={title}/>
                     </div>
-                    <p class="content-split">{text2}</p>
+                    <p>{text2}</p>
                 </div>
 
                 <div class="value">
                     <div class="svg-container">
                         <img src={svg3} alt={title}/>
                     </div>
-                    <p class="content-split">{text3}</p>
+                    <p>{text3}</p>
                 </div>
 
                 <div class="value">
                     <div class="svg-container">
                         <img src={svg4} alt={title}/>
                     </div>
-                    <p class="content-split">{text4}</p>
+                    <p>{text4}</p>
                 </div>
             </div>
            
@@ -208,6 +208,40 @@ const clipId = `clip-path-${lines}`;
         height: 0;
     }
 
+
+    @media screen and (max-width: 900px) {
+        .values-texts{
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        h3{
+            text-align: center;
+            font-size: 3rem;
+            line-height: 58px;
+        }
+
+        .values-content{
+            width: 100%;
+        }
+
+        
+        .values-block {
+            height: auto;
+        }
+
+
+         .svg-container{
+            height: 70px;
+            width: 70px;
+           
+        }
+
+        .svg-container img {
+            width: 70px;
+        }
+
+    }
 
     @media screen and (max-width: 768px) {
 
