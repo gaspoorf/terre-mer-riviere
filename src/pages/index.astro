@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 // import Footer from '../components/Footer.astro';
 import Contact from '../components/Contact.astro';
 import InfoBlock from '../components/InfoBlock.astro';
-import ValuesBlock from '../components/ValuesBlock.astro';
+// import ValuesBlock from '../components/ValuesBlock.astro';
 import BlogBlock from '../components/BlogBlock.astro';
 import FirstBlock from '../components/FirstBlock.astro';
 import Footer from '../components/Footer.astro';
@@ -18,7 +18,7 @@ import { getEntry } from 'astro:content';
 const home = await getEntry('home', 'index');
 const first = home?.data.first ?? [];
 const blocks = home?.data.blocks ?? [];
-const values = home?.data.values ?? [];
+// const values = home?.data.values ?? [];
 const footer = home?.data.footer ?? [];
 ---
 
