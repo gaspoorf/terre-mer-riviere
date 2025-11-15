@@ -160,6 +160,11 @@ export default defineConfig({
               },
               {
                 type: "image",
+                name: "image2",
+                label: "Block Image",
+              },
+              {
+                type: "image",
                 name: "svg1",
                 label: "Icon 1",
               },

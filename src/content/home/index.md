@@ -29,25 +29,13 @@ blocks:
       préservation et des aménagements raisonnés du territoire.
     color: '#7A8450'
     lines: 3
-values:
-  - title: Nos raisons d'être
-    text1: Proposer
-    svg1: /proposer.svg
-    text2: Informer
-    svg2: /informer.svg
-    text3: Participer
-    svg3: /participer.svg
-    text4: Alerter
-    svg4: /alerter.svg
-    color: '#0B2828'
-    lines: 2
 contact:
   - title: Association
     image: /adam-bignell-m6pV7Z5OkwY-unsplash.png
     text: ' Au cœur du PAYS DES RIAS DE L''AVEN ET DU BÉLON Nevez, Pont Aven, Riec sur Bélon, Trégunc'
 footer:
   - title: Terre ⸱ Mer ⸱ Rivière
-    text: Proposer ⸱ Informer ⸱ Participer ⸱ Alerter
+    text: ''
     caption: >-
       Au cœur du PAYS DES RIAS DE L'AVEN ET DU BÉLON‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ Nevez, Pont
       Aven, Riec sur Bélon

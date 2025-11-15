@@ -42,6 +42,7 @@ const home = defineCollection({
 		values: z.array(
 			z.object({
 				title: z.string(),
+				image2: z.string(),
 				text1: z.string(),
 				svg1: z.string(),
 				text2: z.string(),
