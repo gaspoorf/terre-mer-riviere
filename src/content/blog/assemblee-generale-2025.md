@@ -1,8 +1,8 @@
 ---
 title: Assemblée Générale 2025
-description: du 05 mars 2025 au château de Kérangosker à Pont-Aven
-pubDate: 2025-03-04T23:00:00.000Z
-updatedDate: 2025-03-04T23:00:00.000Z
+description: du 06 août 2025 au château de Kérangosker à Pont-Aven
+pubDate: 2025-08-05T22:00:00.000Z
+updatedDate: 2025-08-05T22:00:00.000Z
 heroImage: /AG 2025 PB.JPG
 ---
 
