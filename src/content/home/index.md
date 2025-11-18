@@ -31,10 +31,10 @@ blocks:
     lines: 1
 values:
   - image2: /IMG_3141-fotor-20251118145557-min.png
-    text1: Proposer
-    text2: Informer
-    text3: Participer
-    text4: Alerter
+    text1: PROPOSER
+    text2: INFORMER
+    text3: PARTICIPER
+    text4: ALTERTER
     color: '#0B2828'
 contact:
   - title: Association
