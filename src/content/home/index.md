@@ -30,7 +30,7 @@ blocks:
     color: '#74A6AC'
     lines: 1
 values:
-  - image2: /adam-bignell-m6pV7Z5OkwY-unsplash.png
+  - image2: /IMG_3141-fotor-20251118145557-min.png
     text1: Proposer
     text2: Informer
     text3: Participer
