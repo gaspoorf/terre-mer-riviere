@@ -182,6 +182,29 @@ export default defineConfig({
           },
           {
             type: "object",  // Utilisation de "object" pour des sous-sections répétables
+            name: "contact",
+            label: "Contact Section",
+            list: true,  // Ajoute l'option "list: true" pour permettre d'avoir plusieurs objets
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Contact Title",
+              },
+              {
+                type: "image",
+                name: "image",
+                label: "Contact Image",
+              },
+              {
+                type: "string",
+                name: "text",
+                label: "Contact Text",
+              },
+            ],
+          },
+          {
+            type: "object",  // Utilisation de "object" pour des sous-sections répétables
             name: "footer",
             label: "Footer Section",
             list: true,  // Ajoute l'option "list: true" pour permettre d'avoir plusieurs objets
