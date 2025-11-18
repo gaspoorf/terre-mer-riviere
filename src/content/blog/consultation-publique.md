@@ -6,7 +6,7 @@ updatedDate: 2025-03-04T23:00:00.000Z
 heroImage: /adam-bignell-m6pV7Z5OkwY-unsplash.png
 ---
 
-Messieurs, \
+Mesdames, Messieurs, \
 \
 L’environnement et la qualité du cadre de vie dans le pays de l'Aven et du Bélon constituent les axes forts de l'action de notre Association. Elle regroupe un peu plus de 150 adhérents. C'est pourquoi, le projet d’extension de la SCEA de GOULET ne saurait laisser indifférent l’ensemble des adhérents de Terre Mer Rivière. D’autant plus que depuis sa création, il y a près d’une vingtaine d’années, notre Association s’est particulièrement engagée dans les études et démarches en vue d’améliorer la qualité des eaux des deux rias de l’Aven et du Bélon. Elle a contribué à la réalisation d’études et participé aux travaux engagés par le SAGE. \
 \
