@@ -4,11 +4,14 @@ interface Props {
 }
 
 const { date } = Astro.props;
+
+const utcDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+
 ---
 
-<time datetime={date.toISOString()}>
+<time datetime={utcDate.toISOString()}>
 	{
-		date.toLocaleDateString('fr', {
+		utcDate.toLocaleDateString('fr', {
 			year: 'numeric',
 			month: 'short',
 			day: 'numeric',
