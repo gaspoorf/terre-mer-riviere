@@ -30,7 +30,7 @@ blocks:
     color: '#74A6AC'
     lines: 1
 values:
-  - image2: /IMG_3141-fotor-20251118145557-min.png
+  - image2: /IMG_3141-fotor-20251118145557-min_1__11zon.webp
     svg1: /alerter 1.svg
     text1: PROPOSER
     svg2: /proposer 1.svg
