@@ -7,7 +7,7 @@ first:
 blocks:
   - title: Terre
     svg: /Group 406.svg
-    image: /terre.png
+    image: /terre(1).png
     text: >-
       Valoriser les sites naturels, urbains et historiques tout en assurant la
       préservation et des aménagements raisonnés du territoire.
