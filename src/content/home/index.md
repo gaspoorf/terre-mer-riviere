@@ -15,7 +15,7 @@ blocks:
     lines: 3
   - title: Mer
     svg: /icon-sea-2.svg
-    image: /vagues.png
+    image: /vagues_1_.webp
     text: >-
       Agir pour la protection de l’environnement marin et du littoral, à travers
       des actions de sensibilisation et de préservation des écosystèmes côtiers.
