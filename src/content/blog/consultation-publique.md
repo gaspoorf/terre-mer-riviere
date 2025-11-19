@@ -3,7 +3,7 @@ title: Consultation Publique
 description: Opposition au projet d’extension de la SCEA de Goulet.
 pubDate: 2025-03-04T23:00:00.000Z
 updatedDate: 2025-03-04T23:00:00.000Z
-heroImage: /adam-bignell-m6pV7Z5OkwY-unsplash.png
+heroImage: /adam-bignell-m6pV7Z5OkwY-unsplash_1_-1.webp
 ---
 
 Mesdames, Messieurs, \
