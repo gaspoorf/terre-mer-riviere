@@ -154,9 +154,19 @@ export default defineConfig({
                 label: "Block Image",
               },
               {
+                type: "image",
+                name: "svg1",
+                label: "Icon 1",
+              },
+              {
                 type: "string",
                 name: "text1",
                 label: "Valeur 1",
+              },
+              {
+                type: "image",
+                name: "svg2",
+                label: "Icon 2",
               },
               {
                 type: "string",
@@ -164,9 +174,19 @@ export default defineConfig({
                 label: "Valeur 2",
               },
               {
+                type: "image",
+                name: "svg3",
+                label: "Icon 3",
+              },
+              {
                 type: "string",
                 name: "text3",
                 label: "Valeur 3",
+              },
+              {
+                type: "image",
+                name: "svg4",
+                label: "Icon 4",
               },
               {
                 type: "string",

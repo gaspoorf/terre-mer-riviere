@@ -46,6 +46,10 @@ const home = defineCollection({
 				text2: z.string(),
 				text3: z.string(),
 				text4: z.string(),
+				svg1: z.string(),
+				svg2: z.string(),
+				svg3: z.string(),
+				svg4: z.string(),
 				color: z.string(),
 			})
 		).optional(),
