@@ -23,7 +23,7 @@ blocks:
     lines: 2
   - title: Ria
     svg: /Group 407.svg
-    image: /riviere.jpeg
+    image: /riviere_1__11zon-1.webp
     text: >-
       Sauvegarder les milieux aquatiques et les écosystèmes des cours d’eau, en
       favorisant une gestion durable et respectueuse de la biodiversité.
