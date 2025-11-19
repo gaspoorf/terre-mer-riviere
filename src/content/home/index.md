@@ -31,11 +31,15 @@ blocks:
     lines: 1
 values:
   - image2: /IMG_3141-fotor-20251118145557-min.png
+    svg1: /alerter 1.svg
     text1: PROPOSER
+    svg2: /proposer 1.svg
     text2: INFORMER
+    svg3: /participer 1.svg
     text3: PARTICIPER
-    text4: ALTERTER
-    color: '#0B2828'
+    svg4: /informer 1.svg
+    text4: ALERTER
+    color: '#74a6ac'
 contact:
   - title: Association
     image: /adam-bignell-m6pV7Z5OkwY-unsplash.png

@@ -1,5 +1,5 @@
 ---
-const { color, image2, text1, text2, text3, text4, lines } = Astro.props;
+const { color, image2, text1, text2, text3, text4, svg1, svg2, svg3, svg4, lines } = Astro.props;
 const clipId = `clip-path-${lines}`;
 
 // import Ria from '../../public/icon-ria.svg';
@@ -29,10 +29,30 @@ const clipId = `clip-path-${lines}`;
         </div>
 
         <div class="stair">
-            <div class="step">{text1}</div>
-            <div class="step">{text2}</div>
-            <div class="step">{text3}</div>
-            <div class="step">{text4}</div>
+            <div class="step">
+                <div class="svg-container">
+                    <img src={svg1} alt="icon"/>
+                </div>
+                {text1}
+            </div>
+            <div class="step">
+                <div class="svg-container">
+                    <img src={svg2} alt="icon"/>
+                </div>
+                {text2}
+            </div>
+            <div class="step">
+                <div class="svg-container">
+                    <img src={svg3} alt="icon"/>
+                </div>
+                {text3}
+            </div>
+            <div class="step">
+                <div class="svg-container">
+                    <img src={svg4} alt="icon"/>
+                </div>
+                {text4}
+            </div>
         </div>
         
 
@@ -130,15 +150,39 @@ const clipId = `clip-path-${lines}`;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 600;
+    }
+
+    .step{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 
 
     .step:nth-child(1) { margin-left: 0%; }
-    .step:nth-child(2) { margin-left: 25%; }
-    .step:nth-child(3) { margin-left: 55%; }
-    .step:nth-child(4) { text-align: right; }
+    .step:nth-child(2) { margin-left: 22%; }
+    .step:nth-child(3) { margin-left: 52%; }
+    .step:nth-child(4) { justify-content: flex-end; }
+
+    .svg-container{
+        width: 40px;
+        height: 40px;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .svg-container img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     @media screen and (max-width: 1279px) {
         .step:nth-child(1),
@@ -147,6 +191,7 @@ const clipId = `clip-path-${lines}`;
         .step:nth-child(4) { 
             text-align: center;
             margin-left: 0; 
+            justify-content: center;
         }
     }
 
