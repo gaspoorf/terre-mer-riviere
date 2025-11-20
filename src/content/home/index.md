@@ -19,7 +19,7 @@ blocks:
     text: >-
       Agir pour la protection de l’environnement marin et du littoral, à travers
       des actions de sensibilisation et de préservation des écosystèmes côtiers.
-    color: '#0B2828'
+    color: '#74a6ac'
     lines: 2
   - title: Ria
     svg: /Group 407.svg
