@@ -21,6 +21,16 @@ const footer = home?.data.footer ?? [];
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-162W124SJ7"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-162W124SJ7');
+		</script>
+
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 
