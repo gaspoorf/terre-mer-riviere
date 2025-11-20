@@ -27,7 +27,7 @@ blocks:
     text: >-
       Sauvegarder les milieux aquatiques et les écosystèmes des cours d’eau, en
       favorisant une gestion durable et respectueuse de la biodiversité.
-    color: '#0B2828'
+    color: '#74a6ac'
     lines: 1
 values:
   - image2: /IMG_3141-fotor-20251118145557-min_1__11zon.webp
