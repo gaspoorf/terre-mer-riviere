@@ -93,7 +93,7 @@ export function animateTitleContent() {
 
 
   const values = document.querySelectorAll(".step");
-const container = document.querySelector(".stair"); // Assurez-vous d'avoir un conteneur parent pour vos .step
+const container = document.querySelector(".stair");
 
 gsap.set(values, {
     opacity: 0,
@@ -107,14 +107,11 @@ gsap.to(values, {
     x: 0,
     ease: "power1.inOut",
     duration: 0.5,
-    // 🔥 C'est ici que le décalage est géré par GSAP
     stagger: 0.15,
     scrollTrigger: {
-        // Cibler le conteneur ou le premier élément comme déclencheur
         trigger: container || values[0], 
         start: 'top center+=20%',
         end: 'bottom center',
-        // 'play none none reverse' est correct pour rejouer l'animation
         toggleActions: "play none none reverse" 
     }
 });
