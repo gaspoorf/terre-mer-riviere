@@ -39,7 +39,7 @@ values:
     text3: PARTICIPER
     svg4: /informer 1.svg
     text4: ALERTER
-    color: '#7A8450'
+    color: '#3A5A67'
 contact:
   - title: Association
     image: /adam-bignell-m6pV7Z5OkwY-unsplash.png
