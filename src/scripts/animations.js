@@ -93,28 +93,28 @@ export function animateTitleContent() {
 
 
   const values = document.querySelectorAll(".step");
-const container = document.querySelector(".stair");
+    const container = document.querySelector(".stair");
 
-gsap.set(values, {
-    opacity: 0,
-    filter: "blur(10px)",
-    x: 100,
-});
+    gsap.set(values, {
+        opacity: 0,
+        filter: "blur(10px)",
+        x: 100,
+    });
 
-gsap.to(values, {
-    opacity: 1,
-    filter: "blur(0px)",
-    x: 0,
-    ease: "power1.inOut",
-    duration: 0.5,
-    stagger: 0.15,
-    scrollTrigger: {
-        trigger: container || values[0], 
-        start: 'top center+=20%',
-        end: 'bottom center',
-        toggleActions: "play none none reverse" 
-    }
-});
+    gsap.to(values, {
+        opacity: 1,
+        filter: "blur(0px)",
+        x: 0,
+        ease: "power1.inOut",
+        duration: 0.5,
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: container || values[0], 
+            start: 'top center+=20%',
+            end: 'bottom center',
+            toggleActions: "play none none reverse" 
+        }
+    });
 
 
     const postCards = document.querySelectorAll(".post-card");
