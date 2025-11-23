@@ -10,7 +10,7 @@ blocks:
     image: /terre_2_.webp
     text: >-
       Valoriser les sites naturels, urbains et historiques tout en assurant la
-      préservation et des aménagements raisonnés du territoire.
+      préservation et l’aménagement raisonné du territoire.
     color: '#7A8450'
     lines: 3
   - title: Mer
